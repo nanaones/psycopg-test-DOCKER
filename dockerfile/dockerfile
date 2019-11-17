@@ -1,6 +1,6 @@
 FROM nanaones/psycopg-test:0.0.2
 
+ENV loop 1
 
-CMD ["cd", "/home"]    
-CMD ["git", "clone", "https://github.com/nanaones/psycopg-test-docker", "/home/"]    
-CMD ["bash", "/home/psycopg-test-docker/start/start.sh"]
+ADD ./start /run
+CMD ["bash", "/run/start.sh"]
