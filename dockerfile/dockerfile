@@ -3,4 +3,5 @@ FROM nanaones/psycopg-test:0.0.2
 ENV loop 1
 
 ADD ./start /run
+ADD ./config  /run/config
 CMD ["bash", "/run/start.sh"]
