@@ -7,11 +7,10 @@ git clone https://github.com/nanaones/psycopg-test &&\
 ## TODO add if connectPgcontainer, connect elasticContainer and  fluentdContainer 
 
 # wait-for-it
+
 mkdir /logs &&\
-ls &&\
-cat /run/config/config.ini &&\
+echo $CONFIGPATH &&\
 cd  /psycopg-test/ &&\
-ls &&\
 cp /run/config/config.ini /psycopg-test/config/config.ini &&\
 python3 -m pip install -r requirements.txt &&\
 python3 main.py  $loop

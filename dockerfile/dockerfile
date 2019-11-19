@@ -1,6 +1,7 @@
 FROM nanaones/psycopg-test:0.0.2
 
 ENV loop 1
+ENV CONFIGPATH /psycopg-test/config/config.ini
 
 ADD ./start /run
 ADD ./config  /run/config
