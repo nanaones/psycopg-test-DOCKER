@@ -1,7 +1,11 @@
 FROM nanaones/psycopg-test:0.0.2
 
 ENV loop 1
+ENV minconn 1
+ENV _log_save_folder_path /logs/
+ENV _log_type json
+ENV CONFIGPATH /psycopg-test/config/config.ini
 
-ADD ./start /run
-ADD ./config  /run/config
+ADD ./psycopg-test/start /run
+ADD ./psycopg-test/config  /run/config
 CMD ["bash", "/run/start.sh"]
