@@ -3,9 +3,6 @@
 git clone https://github.com/nanaones/psycopg-test &&\
 git clone https://github.com/vishnubob/wait-for-it /wait &&\
 
-## get env if run as docker-compose
-## TODO add if connectPgcontainer, connect elasticContainer and  fluentdContainer 
-
 # wait-for-it
 chmod +x ./wait/wait-for-it.sh &&\
 ./wait/wait-for-it.sh 127.0.0.1:5432 &&\
