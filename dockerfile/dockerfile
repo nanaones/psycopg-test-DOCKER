@@ -11,4 +11,5 @@ ENV DBMS_PORT 5432
 
 ADD ./start /run
 ADD ./config  /run/config
+
 CMD ["bash", "/run/start.sh"]
