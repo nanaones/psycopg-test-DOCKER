@@ -1,12 +1,10 @@
 #! /bin/bash
 
-git clone https://github.com/nanaones/psycopg-test &&\
-git clone https://github.com/vishnubob/wait-for-it /wait &&\
-
-# wait-for-it
-chmod +x ./wait/wait-for-it.sh &&\
-./wait/wait-for-it.sh 127.0.0.1:5432 &&\
 echo $CONFIGPATH &&\
+echo $DBMS_PORT &&\ 
+echo $CONFIGPATH &&\
+/run/chekLogFolder.sh &&\
+git clone https://github.com/nanaones/psycopg-test &&\
 cd  /psycopg-test/ &&\
 cp /run/config/config.ini /psycopg-test/config/config.ini &&\
 python3 -m pip install -r requirements.txt &&\
