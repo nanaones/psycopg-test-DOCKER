@@ -10,3 +10,4 @@ if [ $IS_STAND_ALONE == false ]; then
 elif [ $IS_STAND_ALONE == true ]; then
     mkdir /logs/
 fi
+echo `ls /config`
